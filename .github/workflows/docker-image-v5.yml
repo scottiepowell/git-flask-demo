@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker Image
-      run: docker build . --file Dockerfile --tag scottiee/flask-demo-git-actions:$(date +%s)
+      run: docker build . --file Dockerfile --tag scottiee/flask-bare-bones:$(date +%s)
 
     - name: Docker Push
       run: docker push scottiee/flask-bare-bones
