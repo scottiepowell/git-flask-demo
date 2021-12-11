@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
 
@@ -24,5 +24,5 @@ jobs:
       run: docker build . --file Dockerfile --tag scottiee/flask-bare-bones:$(date +%s)
 
     - name: Docker Push
-      run: docker push scottiee/flask-bare-bones:v2
+      run: docker push scottiee/flask-bare-bones
 
